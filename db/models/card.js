@@ -14,14 +14,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Card.init({
+    img: DataTypes.TEXT,
     answer: DataTypes.TEXT,
     question: DataTypes.TEXT,
     cost: DataTypes.INTEGER,
     topic_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Topics',
-        key: 'id',
+        model:'Topics',
+        key: 'id'
       }
     }
   }, {
