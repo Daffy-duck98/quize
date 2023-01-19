@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "Vas",
+    "password": "VasVas",
+    "database": "db_kvizzz",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
