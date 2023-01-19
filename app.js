@@ -1,18 +1,23 @@
-require('@babel/register');
-const express = require('express');
+require("@babel/register");
+const express = require("express");
+const morgan = require("morgan");
+const path = require("path");
+const ssr = require("./middleware/ssr");
 
 const app = express();
 
 const PORT = 3000;
 
-// const mainRoute = require('./routes/main.routes');
-// const citatesRoute = require('./routes/citates.routes');
-// const authRoute = require('./routes/auth.routes');
+const mainRoute = require("./routes/main.routes");
 
-// app.use('/', mainRoute);
-// app.use('/citates', citatesRoute);
-// app.use('/auth', authRoute);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(ssr);
+app.use(morgan("dev"));
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/", mainRoute);
 
 app.listen(PORT, () => {
-    console.log(`Порт ЗАПУЩЕН!!! ${PORT}`);
+  console.log(`Порт ЗАПУЩЕН!!! ${PORT}`);
 });
