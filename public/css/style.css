@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.2;
+}
+.nav__container {
+  width: 100%;
+  background: #ffffff;
+}
+
+.main,
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.main__img {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.main__title {
+  color: #ff5040;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.5;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+footer {
+  background: #ffc153;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.2;
+  padding: 2em 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 3em;
+  /* position: absolute; */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.topic__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.topic__list li {
+  list-style: none;
+  border-radius: 5px;
+  width: 30%;
+  padding: 2.5em 0;
+  margin-bottom: 1.5em;
+  text-align: center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+.topic__list li a {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+.topic__list li:hover {
+  transform: scale(1.1);
+}
+.topic__list li:nth-child(7n + 1) {
+  background: #ed5564;
+}
+.topic__list li:nth-child(7n + 2) {
+  background: #fe8426;
+}
+.topic__list li:nth-child(7n + 3) {
+  background: #ffce55;
+}
+.topic__list li:nth-child(7n + 4) {
+  background: #a0d468;
+}
+.topic__list li:nth-child(7n + 5) {
+  background: #48cfae;
+}
+.topic__list li:nth-child(7n + 6) {
+  background: #50c1e9;
+}
+.topic__list li:nth-child(7n + 7) {
+  background: #ac92ed;
+}
+.topic__list li:nth-child(7n + 8) {
+  background: #ed5564;
+}
+.topic__list li:nth-child(7n + 9) {
+  background: #fe8426;
+}
+.topic__list li:nth-child(7n + 10) {
+  background: #ffce55;
+}
+
+.form__container {
+  text-align: center;
+}
+
+#regForm,
+#loginForm {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  background: #fff;
+  border: 1px solid #ffc054;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  width: 40%;
+  margin: auto;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+input {
+  background: #fff;
+  border: 1px solid #ffc054;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  padding: 0.5em;
+  margin: 15px 0;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+input:focus {
+  outline: none;
+}
+button {
+  padding: 0.7em;
+  border: 0;
+  background: #ff5040;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  margin-bottom: 15px;
+}
+button:hover {
+  background: #ba3327;
+  box-shadow: none;
+}
+
+.errorBlock {
+  border: 1px solid #ff4500;
+  padding: 5px;
+  font-size: 10pt;
+  visibility: hidden;
+  margin-top: 4px;
+  max-width: 300px;
+}
+
+.quest {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2%;
+  border: 1px solid #ffc054;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1em;
+}
+.questImg {
+  width: 30%;
+  overflow: hidden;
+}
+.questImg img {
+  width: 100%;
+}
+.questAsk {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+p.ask {
+  font-size: 1.2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  text-align: justify;
+}
+.correct {
+  border: 1px solid #94c7ef;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.falta {
+  border: 1px solid #ff4500;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+button.prev {
+  padding: 0.7em;
+  border: 0;
+  background: #ff5040;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  margin-bottom: 15px;
+  width: 49%;
+}
+button.prev:hover {
+  background: #ba3327;
+  box-shadow: none;
+}
+button.next {
+  padding: 0.7em;
+  border: 0;
+  background: #40cfff;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  margin-bottom: 15px;
+  width: 49%;
+}
+button.next:hover {
+  background: #32a2c7;
+  box-shadow: none;
+}
+.answer_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none !important;
+}
+.enter {
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  width: 30%;
+  padding: 2em 0;
+  margin-bottom: 1em;
+  text-align: center;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  background: #ff5040;
+  margin: auto;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.enter:hover {
+  background: #af3328;
+}
+.cat {
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+}
+.cat img {
+  width: 200px;
+}
+@media screen and (max-width: 768px) {
+  .main,
+  .container {
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main,
+  .container {
+    width: 94%;
+  }
+  .topic__list li {
+    width: 100%;
+  }
+  .main__title {
+    text-align: center;
+  }
+  #regForm,
+  #loginForm {
+    width: 100%;
+  }
+
+  .questImg,
+  .questAsk {
+    width: 100%;
+  }
+  .enter {
+    width: 100%;
+  }
+}
+
+.nav__items {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.nav__item {
+  list-style: none;
+  margin: 10px;
+}
+.nav__item a {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px 5px;
+  color: #ed5565;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav__item a:after {
+  background-color: #ed5565; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  margin-top: 5px;
+  height: 1px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.nav__item a:hover:after,
+.nav__item a:focus:after {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+nav .kaumkan {
+  color: #ed5565;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li.logname {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px 5px;
+  color: #ed5565;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+}
+nav ul li a {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px 5px;
+  color: #ed5565;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+}
+
+nav ul li a:after {
+  background-color: #ed5565; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  margin-top: 5px;
+  height: 1px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+nav ul li a a:hover:after,
+nav ul li a a:focus:after {
+  width: 100%;
+}
+
+nav .menu-btn i {
+  color: #ed5565;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background: #fbfbfb;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #8e2d37;
+  }
+}
