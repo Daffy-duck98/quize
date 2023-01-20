@@ -1,7 +1,5 @@
-
 const React = require("react");
 const Navigation = require("./Navigation");
-
 
 function Layout({ title, children }) {
   return (
@@ -15,6 +13,10 @@ function Layout({ title, children }) {
           content="width=device-width, initial-scale=1"
         ></meta>
         <link rel="stylesheet" href="/css/style.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        />
         <script defer src="/scripts/client.js" />
 
         <title>{title}</title>
@@ -39,4 +41,3 @@ function Layout({ title, children }) {
 }
 
 module.exports = Layout;
-

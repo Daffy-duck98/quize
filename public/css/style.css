@@ -21,47 +21,6 @@ body {
   margin: auto;
 }
 
-.nav__items {
-  display: flex;
-  justify-content: flex-start;
-  list-style: none;
-}
-
-.nav__item {
-  list-style: none;
-  margin: 10px;
-}
-.nav__item a {
-  font-family: "Raleway", sans-serif;
-  font-size: 1em;
-  text-decoration: none;
-  padding: 10px 5px;
-  color: #ed5565;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 300;
-  display: inline-block;
-  line-height: 1;
-  cursor: pointer;
-  outline: none;
-}
-
-.nav__item a:after {
-  background-color: #ed5565; /* Цвет линии при наведении на нее курсора мыши */
-  display: block;
-  content: "";
-  margin-top: 5px;
-  height: 1px; /* Высота линии */
-  width: 0%;
-  -webkit-transition: width 0.3s ease-in-out;
-  -moz--transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.nav__item a:hover:after,
-.nav__item a:focus:after {
-  width: 100%;
-}
-
 .main__img {
   width: 100%;
   margin-bottom: 2em;
@@ -294,6 +253,7 @@ button.next:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 @media screen and (max-width: 768px) {
   .main,
   .container {
@@ -320,5 +280,148 @@ button.next:hover {
   .questImg,
   .questAsk {
     width: 100%;
+  }
+}
+
+.nav__items {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.nav__item {
+  list-style: none;
+  margin: 10px;
+}
+.nav__item a {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px 5px;
+  color: #ed5565;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav__item a:after {
+  background-color: #ed5565; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  margin-top: 5px;
+  height: 1px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.nav__item a:hover:after,
+.nav__item a:focus:after {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+nav .kaumkan {
+  color: #ed5565;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px 5px;
+  color: #ed5565;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+}
+
+nav ul li a:after {
+  background-color: #ed5565; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  margin-top: 5px;
+  height: 1px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+nav ul li a a:hover:after,
+nav ul li a a:focus:after {
+  width: 100%;
+}
+
+nav .menu-btn i {
+  color: #ed5565;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background: #fbfbfb;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #8e2d37;
   }
 }
