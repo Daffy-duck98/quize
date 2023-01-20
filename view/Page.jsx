@@ -1,9 +1,9 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function Page({ title }) {
+function Page({ title, name }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} name={name}>
       <div className="container">
         <h1 className="main__title">Вопрос</h1>
         <div className="quest">

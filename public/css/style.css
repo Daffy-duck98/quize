@@ -32,6 +32,7 @@ body {
   font-weight: 300;
   font-size: 1.5;
   margin-bottom: 2em;
+  text-align: center;
 }
 
 footer {
@@ -178,6 +179,7 @@ button:hover {
   border-radius: 5px;
   margin: auto;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1em;
 }
 .questImg {
   width: 30%;
@@ -253,7 +255,35 @@ button.next:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+a {
+  text-decoration: none !important;
+}
+.enter {
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  width: 30%;
+  padding: 2em 0;
+  margin-bottom: 1em;
+  text-align: center;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  background: #ff5040;
+  margin: auto;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.enter:hover {
+  background: #af3328;
+}
+.cat {
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+}
+.cat img {
+  width: 200px;
+}
 @media screen and (max-width: 768px) {
   .main,
   .container {
@@ -279,6 +309,9 @@ button.next:hover {
 
   .questImg,
   .questAsk {
+    width: 100%;
+  }
+  .enter {
     width: 100%;
   }
 }
@@ -342,6 +375,20 @@ nav ul {
 }
 nav ul li {
   margin: 0 5px;
+}
+nav ul li.logname {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px 5px;
+  color: #ed5565;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
 }
 nav ul li a {
   font-family: "Raleway", sans-serif;
