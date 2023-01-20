@@ -16,11 +16,6 @@ function Navigation({ name }) {
                   Квиз
                 </a>
               </li>
-              <li>
-                <a class="active" href="/topics">
-                  Темы
-                </a>
-              </li>
               {!name && (
                 <>
                   <li>
@@ -33,7 +28,7 @@ function Navigation({ name }) {
               )}
               {name && (
                 <>
-                  <li className="logname">Привет, {name}!</li>
+                  <li className="logname">Привет, {name}! </li>
                   <li>
                     <a href="/logout">Выйти</a>
                   </li>

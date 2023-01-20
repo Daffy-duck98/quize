@@ -4,13 +4,16 @@ const Layout = require("./Layout");
 function Topics({ title, topicsDB, name }) {
   return (
     <Layout title={title} name={name}>
-      <h1>Topics page</h1>
-      <div>
-        {topicsDB.map((topic) => (
-          <a href={`/topics/${topic.id}`}>{topic.name}</a>
-        ))}
-      </div>
       <div className="container">
+      <h1 className="main__title">Выберете тему:</h1>
+      <ul className="topic__list">
+        {topicsDB.map((topic) => (
+          <li><a href={`/topics/${topic.id}`}>{topic.name}</a></li>
+        ))}
+       </ul>
+      </div>
+
+      {/* <div className="container">
         <h1 className="main__title">Выберете тему:</h1>
         <ul className="topic__list">
           <li>
@@ -44,7 +47,7 @@ function Topics({ title, topicsDB, name }) {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
     </Layout>
   );
 }

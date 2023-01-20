@@ -19,11 +19,29 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
-  // console.log(req.params)
-  const findTopic = await Card.findAll({ where: { topic_id: req.params.id } });
-  console.log(findTopic);
-  res.renderComponent(Cards, { tittle: `Card page`, findTopic });
-});
+router.get('/:id', async (req, res) =>  {
+    // console.log(req.params)
+    const findTopic = await Card.findAll({where: {topic_id: req.params.id}})
+    console.log(findTopic)
+    res.renderComponent(Cards, {tittle: `Card page`, findTopic})
+})
+
+router.post('/', async (req, res) => {
+    const {answer, id} = req.body
+
+
+
+
+
+    const ans = await Card.findOne({where: {id}})
+    console.log(ans.answer)
+    if(ans.answer.toLowerCase() === answer.toLowerCase())  {
+        
+        res.json({message: 'ok'})
+    }
+    else{
+        res.json({message: 'not ok', answerCor: ans.answer})
+    }
+})
 
 module.exports = router;

@@ -5,9 +5,9 @@ const Layout = require('./Layout');
 function Card({ title, findTopic }) {
   return (
     <Layout title={title}>
-      <div>
+      <div className="main-container">
         {findTopic.map((card) => (
-            <div className="container">
+            <div className={`container`}>
             <div className="quest">
               <div className="questImg">
                 <img src={`${card.img}`} />
@@ -16,17 +16,20 @@ function Card({ title, findTopic }) {
                 <p className="ask">
                   {card.question}
                 </p>
-                <input type="text" name="answer" placeholder="Введите ваш ответ" />
+                <form id='ffform' method="post" action='/topics' >
+                {/* <input name='id' type='number' value={card.id} style={{visibility: 'hidden'}} /> */}
+                <input data-id={card.id} type="text" name="answer" placeholder="Введите ваш ответ" />
                 <div className="answer_block">
-                  <p class="correct">Ответ верный. Ваш счет 10 баллов</p>
+                  <p className={`correct p${card.id}`}></p>
     
                   <button type="submit" className="prev">
                     Ответ
                   </button>
-                  <button type="submit" className="next">
+                  {/* <button type="submit" className="next">
                     Следующий вопрос
-                  </button>
+                  </button> */}
                 </div>
+                </form>
               </div>
             </div>
           </div>

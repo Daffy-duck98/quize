@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    const topics = ['Котики']
+    const topics = ['Котики', 'Кино', 'Программирование', 'Загадки', 'Загадки по картинкам', 'Религия']
     const data = topics.map(topic => ({
       name: topic,
       createdAt:new Date(),
