@@ -1,28 +1,35 @@
-const React = require('react');
-const Layout = require('./Layout');
+const React = require("react");
+const Layout = require("./Layout");
+const Navigation = require("./Navigation");
 
 function Main({ title, name, topics }) {
-  return (
-    (name ? (
-      <Layout title={title} name={name}>
-        <h1>Квиз</h1>
-        <div className="cards">
-            <h3>Привет, {name}</h3>
-            <a href="/logout">Разлогиниться</a>
-
+  return name ? (
+    <Layout title={title} name={name}>
+      <div className="container">
+        <h1 className="main__title">Квиз</h1>
+        <a href="/topics">
+          <div className="enter">Играть!</div>
+        </a>
+        <div className="cat">
+          <img src="/img/favicon.png" />
         </div>
-      </Layout >
-    )
-      : (
-        <Layout title={title} name={name} topics={topics}>
-          <h3>Необходимо зарегистрироваться или авторизироваться, чтобы играть!</h3>
-          {/* {topics.map((topic) =>(
-              <Topic key={topic.id} car={car}/>
-            ))} */}
-        </Layout>
-      ))
+      </div>
+    </Layout>
+  ) : (
+    <Layout title={title} name={name} topics={topics}>
+      <div className="container">
+        <h1 className="main__title">
+          Необходимо зарегистрироваться или авторизироваться, чтобы играть!
+        </h1>
+        <a href="/reg">
+          <div className="enter">Зарегистрироваться!</div>
+        </a>
+        <div className="cat">
+          <img src="/img/favicon.png" />
+        </div>
+      </div>
+    </Layout>
   );
 }
 
 module.exports = Main;
-

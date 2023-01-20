@@ -1,15 +1,49 @@
-const React = require('react');
-const Layout = require('./Layout');
+const React = require("react");
+const Layout = require("./Layout");
 
-
-function Topics({ title, topicsDB }) {
+function Topics({ title, topicsDB, name }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} name={name}>
       <h1>Topics page</h1>
       <div>
         {topicsDB.map((topic) => (
           <a href={`/topics/${topic.id}`}>{topic.name}</a>
         ))}
+      </div>
+      <div className="container">
+        <h1 className="main__title">Выберете тему:</h1>
+        <ul className="topic__list">
+          <li>
+            <a href="/page" title="Програмирование">
+              Програмирование
+            </a>
+          </li>
+          <li>
+            <a href="/page" title="Кино">
+              Кино
+            </a>
+          </li>
+          <li>
+            <a href="/page" title="Города и страны">
+              Города и страны
+            </a>
+          </li>
+          <li>
+            <a href="/page" title="Русские сказки">
+              Русские сказки
+            </a>
+          </li>
+          <li>
+            <a href="/page" title="Факты о животных">
+              Факты о животных
+            </a>
+          </li>
+          <li>
+            <a href="/page" title="Загадки">
+              Загадки
+            </a>
+          </li>
+        </ul>
       </div>
     </Layout>
   );

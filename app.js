@@ -10,7 +10,7 @@ const app = express();
 const PORT = 3000;
 configApp(app);
 
-const mainRoute = require("./routes/main.routes");
+const mainRoute = require("./routes/mainRoute");
 const regRoute = require("./routes/regRoute");
 const logoutRoute = require("./routes/logoutRoute");
 const authRoutes = require("./routes/authRoutes");
