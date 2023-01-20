@@ -28,6 +28,11 @@ router.get('/:id', async (req, res) =>  {
 
 router.post('/', async (req, res) => {
     const {answer, id} = req.body
+
+
+
+
+
     const ans = await Card.findOne({where: {id}})
     console.log(ans.answer)
     if(ans.answer.toLowerCase() === answer.toLowerCase())  {
