@@ -30,4 +30,3 @@ app.use("/page", pageRoutes);
 
 app.listen(PORT, () => {
   console.log(`Порт ЗАПУЩЕН!!! ${PORT}`);
-});

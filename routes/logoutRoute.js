@@ -8,5 +8,4 @@ router.route('/').get((req, res) => {
     res.clearCookie('user_sid').redirect('/');
   });
 });
-
 module.exports = router;

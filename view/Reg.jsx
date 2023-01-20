@@ -1,6 +1,7 @@
 const React = require("react");
 const Layout = require("./Layout");
 
+
 module.exports = function Reg({ title }) {
   return (
     <Layout title={title}>
@@ -37,3 +38,4 @@ module.exports = function Reg({ title }) {
     </Layout>
   );
 };
+

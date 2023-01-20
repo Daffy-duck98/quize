@@ -1,11 +1,14 @@
+
 const React = require("react");
 const Navigation = require("./Navigation");
+
 
 function Layout({ title, children }) {
   return (
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
+
         <link rel="icon" href="/img/favicon.png" sizes="32x32" />
         <meta
           name="viewport"
@@ -13,6 +16,7 @@ function Layout({ title, children }) {
         ></meta>
         <link rel="stylesheet" href="/css/style.css" />
         <script defer src="/scripts/client.js" />
+
         <title>{title}</title>
       </head>
       <body>
@@ -35,3 +39,4 @@ function Layout({ title, children }) {
 }
 
 module.exports = Layout;
+

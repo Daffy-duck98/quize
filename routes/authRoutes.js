@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const Log = require('../view/Log');
-// const { User } = require('../db/models');
+const { User } = require('../db/models');
 
 router
   .get('/', (req, res) => {

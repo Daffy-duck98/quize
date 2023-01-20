@@ -15,5 +15,4 @@ function configApp(app) {
   app.use(express.static('public'));
   app.use(ssr);
 }
-
 module.exports = configApp;
