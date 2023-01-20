@@ -6,16 +6,10 @@ function Navigation() {
       <div className="nav__inside main">
         <ul className="nav__items">
           <li className="nav__item">
-            <a href="/">Home</a>
+            <a href="/">Квиз</a>
           </li>
           <li className="nav__item">
-            <a href="/cars">Cars</a>
-          </li>
-          <li className="nav__item">
-            <a href="/users">Users</a>
-          </li>
-          <li className="nav__item">
-            <a href="/users">Hello,Anna</a>
+            <a href="/reg">Зарегистрироваться</a> | <a href="/auth">Войти</a>
           </li>
         </ul>
       </div>

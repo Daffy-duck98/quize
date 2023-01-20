@@ -12,7 +12,7 @@ body {
 }
 .nav__container {
   width: 100%;
-  background: #ffc153;
+  background: #ffffff;
 }
 
 .main,
@@ -36,7 +36,7 @@ body {
   font-size: 1em;
   text-decoration: none;
   padding: 10px 5px;
-  color: #fff;
+  color: #ed5565;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 300;
@@ -47,7 +47,7 @@ body {
 }
 
 .nav__item a:after {
-  background-color: #fff; /* Цвет линии при наведении на нее курсора мыши */
+  background-color: #ed5565; /* Цвет линии при наведении на нее курсора мыши */
   display: block;
   content: "";
   margin-top: 5px;
@@ -64,6 +64,7 @@ body {
 
 .main__img {
   width: 100%;
+  margin-bottom: 2em;
 }
 
 .main__title {
@@ -71,6 +72,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 1.5;
+  margin-bottom: 2em;
 }
 
 footer {
@@ -82,6 +84,239 @@ footer {
   padding: 2em 0;
   bottom: 0;
   width: 100%;
-  margin-top: 5em;
-  position: absolute;
+  margin-top: 3em;
+  /* position: absolute; */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.topic__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.topic__list li {
+  list-style: none;
+  border-radius: 5px;
+  width: 30%;
+  padding: 2.5em 0;
+  margin-bottom: 1.5em;
+  text-align: center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+.topic__list li a {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+.topic__list li:hover {
+  transform: scale(1.1);
+}
+.topic__list li:nth-child(7n + 1) {
+  background: #ed5564;
+}
+.topic__list li:nth-child(7n + 2) {
+  background: #fe8426;
+}
+.topic__list li:nth-child(7n + 3) {
+  background: #ffce55;
+}
+.topic__list li:nth-child(7n + 4) {
+  background: #a0d468;
+}
+.topic__list li:nth-child(7n + 5) {
+  background: #48cfae;
+}
+.topic__list li:nth-child(7n + 6) {
+  background: #50c1e9;
+}
+.topic__list li:nth-child(7n + 7) {
+  background: #ac92ed;
+}
+.topic__list li:nth-child(7n + 8) {
+  background: #ed5564;
+}
+.topic__list li:nth-child(7n + 9) {
+  background: #fe8426;
+}
+.topic__list li:nth-child(7n + 10) {
+  background: #ffce55;
+}
+
+.form__container {
+  text-align: center;
+}
+
+#regForm,
+#loginForm {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  background: #fff;
+  border: 1px solid #ffc054;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  width: 40%;
+  margin: auto;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+input {
+  background: #fff;
+  border: 1px solid #ffc054;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  padding: 0.5em;
+  margin: 15px 0;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+input:focus {
+  outline: none;
+}
+button {
+  padding: 0.7em;
+  border: 0;
+  background: #ff5040;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  margin-bottom: 15px;
+}
+button:hover {
+  background: #ba3327;
+  box-shadow: none;
+}
+
+.errorBlock {
+  border: 1px solid #ff4500;
+  padding: 5px;
+  font-size: 10pt;
+  visibility: hidden;
+  margin-top: 4px;
+  max-width: 300px;
+}
+
+.quest {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2%;
+  border: 1px solid #ffc054;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.questImg {
+  width: 30%;
+  overflow: hidden;
+}
+.questImg img {
+  width: 100%;
+}
+.questAsk {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+p.ask {
+  font-size: 1.2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  text-align: justify;
+}
+.correct {
+  border: 1px solid #94c7ef;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.falta {
+  border: 1px solid #ff4500;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+button.prev {
+  padding: 0.7em;
+  border: 0;
+  background: #ff5040;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  margin-bottom: 15px;
+  width: 49%;
+}
+button.prev:hover {
+  background: #ba3327;
+  box-shadow: none;
+}
+button.next {
+  padding: 0.7em;
+  border: 0;
+  background: #40cfff;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  transition: 1s;
+  margin-bottom: 15px;
+  width: 49%;
+}
+button.next:hover {
+  background: #32a2c7;
+  box-shadow: none;
+}
+.answer_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .main,
+  .container {
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main,
+  .container {
+    width: 94%;
+  }
+  .topic__list li {
+    width: 100%;
+  }
+  .main__title {
+    text-align: center;
+  }
+  #regForm {
+    width: 100%;
+  }
+
+  .questImg,
+  .questAsk {
+    width: 100%;
+  }
 }
