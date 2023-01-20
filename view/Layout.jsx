@@ -17,8 +17,8 @@ function Layout({ title, children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         />
-        <script defer src="/scripts/client.js" />
-
+        <script defer src="/js/client.js" />
+        <script defer src="/js/card.js" />
         <title>{title}</title>
       </head>
       <body>
