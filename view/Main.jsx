@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Main({ title, name, topics }) {
+function Main({ title, name }) {
   return (
     (name ? (
       <Layout title={title} name={name}>
@@ -9,8 +9,8 @@ function Main({ title, name, topics }) {
         <div className="cards">
             <h3>Привет, {name}</h3>
             <a href="/logout">Разлогиниться</a>
-            {/* {topics.map((topic) =>(
-              <h1>{topic.name}</h1>
+            {/* {pivko.map((pivo) => (
+              <Card key={pivo.id} pivo={pivo} />
             ))} */}
 
         </div>
@@ -28,4 +28,3 @@ function Main({ title, name, topics }) {
 }
 
 module.exports = Main;
-
