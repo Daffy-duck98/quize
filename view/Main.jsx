@@ -1,29 +1,28 @@
-const React = require("react");
-const Layout = require("./Layout");
-const Topicsmenu = require("./Topicsmenu");
+const React = require('react');
+const Layout = require('./Layout');
 
-function Main({ title, name }) {
-  return name ? (
-    <Layout title={title} name={name}>
-      <h1>Квиз</h1>
-      <div className="cards">
-        <h3>Привет, {name}</h3>
-        <a href="/logout">Разлогиниться</a>
-        {/* {pivko.map((pivo) => (
-              <Card key={pivo.id} pivo={pivo} />
+function Main({ title, name, topics }) {
+  return (
+    (name ? (
+      <Layout title={title} name={name}>
+        <h1>Квиз</h1>
+        <div className="cards">
+            <h3>Привет, {name}</h3>
+            <a href="/logout">Разлогиниться</a>
+
+        </div>
+      </Layout >
+    )
+      : (
+        <Layout title={title} name={name} topics={topics}>
+          <h3>Необходимо зарегистрироваться или авторизироваться, чтобы играть!</h3>
+          {/* {topics.map((topic) =>(
+              <Topic key={topic.id} car={car}/>
             ))} */}
-        <Topicsmenu />
-      </div>
-    </Layout>
-  ) : (
-    <Layout title={title} name={name}>
-      <h3>Необходимо зарегистрироваться или авторизироваться, чтобы играть!</h3>
-      <a href="/reg">Зарегистрироваться</a>
-      <br />
-      <a href="/auth">Войти</a>
-      <Topicsmenu />
-    </Layout>
+        </Layout>
+      ))
   );
 }
 
 module.exports = Main;
+

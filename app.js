@@ -15,7 +15,8 @@ const regRoute = require("./routes/regRoute");
 const logoutRoute = require("./routes/logoutRoute");
 const authRoutes = require("./routes/authRoutes");
 const pageRoutes = require("./routes/page.routes");
-
+const topicsRoutes = require('./routes/topicsRoutes')
+ 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(ssr);
@@ -27,7 +28,9 @@ app.use("/reg", regRoute);
 app.use("/logout", logoutRoute);
 app.use("/auth", authRoutes);
 app.use("/page", pageRoutes);
+app.use("/topics", topicsRoutes)
+
 
 app.listen(PORT, () => {
   console.log(`Порт ЗАПУЩЕН!!! ${PORT}`);
-});
+})
