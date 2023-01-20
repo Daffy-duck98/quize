@@ -10,8 +10,10 @@ router.get('/', async (req, res) => {
       user = await User.findOne({ where: req.session.user_id });
       name = user.login;
       const curUser = req.session.user_id;
-      const topics = await Topic.findAll()
+      // const topics = await Topic.findAll();
+      res.renderComponent(Main, { title: 'Главная', name });
     }
+    // const topics = await Topic.findAll();
     res.renderComponent(Main, { title: 'Главная', name });
   })
 
