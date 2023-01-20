@@ -1,7 +1,7 @@
 const React = require("react");
 const Navigation = require("./Navigation");
 
-function Layout({ title, children }) {
+function Layout({ title, children, name }) {
   return (
     <html lang="en">
       <head>
@@ -22,14 +22,8 @@ function Layout({ title, children }) {
         <title>{title}</title>
       </head>
       <body>
+      <Navigation name={name}/>
         <div className="body__container">
-          <Navigation />
-          <img
-            src="/img/bg-1.png"
-            alt="quize"
-            title="quize"
-            className="main__img"
-          />
           {children}
           <footer>
             <div className="container">&copy; QUIZE 2022</div>
@@ -41,3 +35,4 @@ function Layout({ title, children }) {
 }
 
 module.exports = Layout;
+
