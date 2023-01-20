@@ -5,11 +5,9 @@ const Layout = require('./Layout');
 function Card({ title, findTopic }) {
   return (
     <Layout title={title}>
-      {/* <h1>Card page</h1> */}
       <div>
         {findTopic.map((card) => (
             <div className="container">
-            <h1 className="main__title">Вопрос</h1>
             <div className="quest">
               <div className="questImg">
                 <img src={`${card.img}`} />
