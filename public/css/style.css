@@ -165,6 +165,7 @@ footer {
   width: 40%;
   margin: auto;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 input {
   background: #fff;
@@ -311,7 +312,8 @@ button.next:hover {
   .main__title {
     text-align: center;
   }
-  #regForm {
+  #regForm,
+  #loginForm {
     width: 100%;
   }
 
