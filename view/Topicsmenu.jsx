@@ -1,6 +1,6 @@
 const React = require("react");
 
-function Topics() {
+function Topicsmenu() {
   return (
     <div className="container">
       <h1 className="main__title">Добро пожаловать в игру!!!</h1>
@@ -39,4 +39,4 @@ function Topics() {
     </div>
   );
 }
-module.exports = Topics;
+module.exports = Topicsmenu;
